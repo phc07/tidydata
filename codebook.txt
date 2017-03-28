@@ -1,0 +1,260 @@
+Introduction
+	XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. 
+	Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. 
+	Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass 
+	Butterworth filter with a corner frequency of 0.3 Hz.
+ 
+	Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals 
+	(tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm 
+	(tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+	Finally a Fast Fourier Transform (FFT) was applied to some of these signals 
+	producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. 
+	(Note the 'f' to indicate frequency domain signals). 
+
+	These signals were used to estimate variables of the feature vector for each pattern:  
+	'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+DATA DICTIONARY
+
+subject	1
+	Subject ID which provides the data
+
+activity 19
+	Activity performed when the data is collected
+
+tBodyAccMeanX
+	Mean of X for body accelerometer measure
+
+tBodyAccMeanY
+	Mean of Y for body accelerometer measure
+
+tBodyAccMeanZ
+	Mean of Z for body accelerometer measure
+	
+tBodyAccStdX
+	Standard deviation of X for body accelerometer measure
+	
+tBodyAccStdY
+	Standard deviation of Y for body accelerometer measure
+	
+tBodyAccStdZ
+	Standard deviation of Z for body accelerometer measure
+	
+tGravityAccMeanX
+	Mean of X for gravity accelerometer measure
+	
+tGravityAccMeanY
+	Mean of Y for gravity accelerometer measure
+
+tGravityAccMeanZ
+	Mean of Z for gravity accelerometer measure
+
+tGravityAccStdX
+	Standard deviation of X for gravity accelerometer measure
+
+tGravityAccStdY
+	Standard deviation of Y for gravity accelerometer measure
+	
+tGravityAccStdZ
+	Standard deviation of Z for gravity accelerometer measure
+	 
+tBodyAccJerkMeanX
+	Mean of X for body accelerometer jerk
+	 
+tBodyAccJerkMeanY
+	Mean of Y for body accelerometer jerk
+	 
+tBodyAccJerkMeanZ 
+	Mean of Z for body accelerometer jerk
+
+tBodyAccJerkStdX
+	Standard deviation of X for body accelerometer jerk 
+
+tBodyAccJerkStdY
+	Standard deviation of Y for body accelerometer jerk 
+	 
+tBodyAccJerkStdZ
+	Standard deviation of Z for body accelerometer jerk
+	  
+tBodyGyroMeanX
+	Mean of X for body gyroscope
+	
+tBodyGyroMeanY
+	Mean of Y for body gyroscope
+	
+tBodyGyroMeanZ
+	Mean of Z for body gyroscope
+	
+tBodyGyroStdX
+	Standard deviation of X for body gyroscope
+
+tBodyGyroStdY
+	Standard deviation of Y for body gyroscope
+	
+tBodyGyroStdZ
+	Standard deviation of Z for body gyroscope
+	
+tBodyGyroJerkMeanX
+	Mean of X for gyroscope jerk
+	
+tBodyGyroJerkMeanY
+	Mean of Y for gyroscope jerk
+	
+tBodyGyroJerkMeanZ
+	Mean of Z for gyroscope jerk
+	
+tBodyGyroJerkStdX
+	Standard deviation of X for gyroscope jerk
+	
+tBodyGyroJerkStdY
+	Standard deviation of Y for gyroscope jerk
+	
+tBodyGyroJerkStdZ
+	Standard deviation of Z for gyroscope jerk
+
+tBodyAccMagMean
+	Mean of body acceleration magnitude
+tBodyAccMagStd
+	Standard deviation of body acceleration magnitude
+	
+tGravityAccMagMean
+	Mean of gravity acceleration magnitude
+	
+tGravityAccMagStd
+	Standard deviation of gravity acceleration magnitude
+	
+tBodyAccJerkMagMean
+	Mean of body acceleration jerk magnitude
+
+tBodyAccJerkMagStd
+	Standard deviation of body acceleration jerk magnitude
+	
+tBodyGyroMagMean
+	Mean of body gyroscope magnitude
+	
+tBodyGyroMagStd
+	Standard deviation of body gyroscope magnitude
+
+tBodyGyroJerkMagMean
+	Mean of body gyroscope jerk magnitude
+	
+tBodyGyroJerkMagStd
+	Standard deviation of body gyroscope jerk magnitude
+
+fBodyAccMeanX
+	Mean of X for body accelerator frequency domain signals 
+	
+fBodyAccMeanY
+	Mean of Y for body accelerator frequency domain signals 
+	
+fBodyAccMeanZ
+	Mean of Z for body accelerator frequency domain signals
+	
+fBodyAccStdX
+	Standard deviation of X for body accelerator frequency domain signals
+	
+fBodyAccStdY
+	Standard deviation of Y for body accelerator frequency domain signals
+	
+fBodyAccStdZ
+	Standard deviation of Z for body accelerator frequency domain signals
+	
+fBodyAccMeanFreqX
+	Mean frequency of X for body accelerator frequency domain signals
+	
+fBodyAccMeanFreqY
+	Mean frequency of Y for body accelerator frequency domain signals
+	
+fBodyAccMeanFreqZ
+	Mean frequency of Z for body accelerator frequency domain signals
+
+fBodyAccJerkMeanX
+	Mean of X for body accelerator jerk frequency domain signals 
+
+fBodyAccJerkMeanY
+	Mean of Y for body accelerator jerk frequency domain signals 
+
+fBodyAccJerkMeanZ
+	Mean of Z for body accelerator jerk frequency domain signals 
+
+fBodyAccJerkStdX
+	Standard deviation of X for body accelerator jerk frequency domain signals 
+
+fBodyAccJerkStdY
+	Standard deviation of Y for body accelerator jerk frequency domain signals
+
+fBodyAccJerkStdZ
+	Standard deviation of Z for body accelerator jerk frequency domain signals
+
+fBodyAccJerkMeanFreqX
+	Mean frequency of X for body accelerator jerk frequency domain signals
+	
+fBodyAccJerkMeanFreqY
+	Mean frequency of Y for body accelerator jerk frequency domain signals
+	
+fBodyAccJerkMeanFreqZ
+	Mean frequency of Z for body accelerator jerk frequency domain signals
+
+fBodyGyroMeanX
+	Mean of X for body gyroscope frequency domain signals
+	
+fBodyGyroMeanY
+	Mean of X for body gyroscope frequency domain signals 
+	
+fBodyGyroMeanZ
+	Mean of Z for body gyroscope frequency domain signals
+	
+fBodyGyroStdX
+	Standard deviation of X for body gyroscope frequency domain signals
+	
+fBodyGyroStdY
+	Standard deviation of Y for body gyroscope frequency domain signals
+	
+fBodyGyroStdZ
+	Standard deviation of Z for body gyroscope frequency domain signals
+
+fBodyGyroMeanFreqX
+	Mean frequency of X for body gyroscope frequency domain signals
+	
+fBodyGyroMeanFreqY
+	Mean frequency of Y for body gyroscope frequency domain signals
+	
+fBodyGyroMeanFreqZ
+	Mean frequency of Z for body gyroscope frequency domain signals
+
+fBodyAccMagMean
+	Mean of body accelerator magnitude frequency domain signals
+	
+fBodyAccMagStd
+	Standard deviation of body accelerator magnitude frequency domain signals
+	
+fBodyAccMagMeanFreq
+	Mean frequency of body accelerator magnitude frequency domain signals
+
+fBodyBodyAccJerkMagMean
+	Mean of body accelerator jerk magnitude frequency domain signals
+	
+fBodyBodyAccJerkMagStd
+	Standard deviation of body accelerator jerk magnitude frequency domain signals
+	
+fBodyBodyAccJerkMagMeanFreq
+	Mean frequency of body accelerator jerk magnitude frequency domain signals 
+
+fBodyBodyGyroMagMean
+	Mean of body gyroscope magnitude frequency domain signals
+	  
+fBodyBodyGyroMagStd
+	Standard deviation of body gyroscope magnitude frequency domain signals 
+
+fBodyBodyGyroMagMeanFreq
+	Mean frequency of body gyroscope magnitude frequency domain signals
+	 
+fBodyBodyGyroJerkMagMean
+	Mean of body gyroscope jerk magnitude frequency domain signals
+ 
+fBodyBodyGyroJerkMagStd
+	Standard deviation of body gyroscope jerk magnitude frequency domain signals
+	 
+fBodyBodyGyroJerkMagMeanFreq
+	Mean frequency of body gyroscope jerk magnitude frequency domain signals
